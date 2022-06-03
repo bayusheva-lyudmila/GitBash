@@ -102,10 +102,10 @@ grep -rs "second"
 grep -l "second" * |xargs realpath
 
  31. Найти все строки во всех файлах где нет комбинации “second”
- grep -vrl second *|xargs realpath
+grep -vr second *
 
  32. Найти только название и путь к файлам где нет комбинации “second”
-grep -vr second *
+grep -vrl second *|xargs realpath 
  
 33. Вывести в терминал 4 последних строк любого текстового файла
 tail -4 inner_dir_1/tf_4.txt
